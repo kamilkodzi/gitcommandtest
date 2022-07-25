@@ -16,8 +16,11 @@ async function lsExample() {
     try {
         const statusA = await exec('git fetch');
         const rawForm = await exec("git diff --stat --raw origin/main")
-        console.log("DIF START: ",rawForm)
-        console.log("DIF ENDS: ")
+        const procelain = await exec("git status --porcelain")
+
+        console.log("porcelain :",procelain)
+        // console.log("DIF START: ",rawForm)
+        // console.log("DIF ENDS: ")
     } catch (error) {
         console.log("Error to :" ,error,"Koniec Errora")
     }
