@@ -16,9 +16,9 @@ async function lsExample() {
     try {
         const statusA = await exec('git fetch');
         // const rawForm = await exec("git diff --stat --raw origin/main")
-        const procelain = await exec("git status")
+        const {stdout,stderr} = await exec("git status")
 
-        console.log(procelain)
+        console.log("Is branch up to date: ",!stdout.includes("Your branch is behind"))
         // console.log("DIF START: ",rawForm)
         // console.log("DIF ENDS: ")
     } catch (error) {
