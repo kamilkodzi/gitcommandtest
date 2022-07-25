@@ -7,3 +7,6 @@ For working flow :
 1. git fetch
 2. git status
 3. git pull
+
+##New header
+To check that theory is correct
