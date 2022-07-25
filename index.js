@@ -13,9 +13,15 @@ const util = require('node:util');
 const exec = util.promisify(require('node:child_process').exec);
 
 async function lsExample() {
-  const statusA = await exec('git fetch');
+    try {
+        const statusA = await exec('git fetch');
+        console.log(statusA)
+    } catch (error) {
+        console.log("Error to :" ,error,"Koniec Errora")
+    }
+  
 //   console.log('stdout:', stdout);
 //   console.error('stderr:', stderr);
-console.log(statusA)
+
 }
 lsExample();
