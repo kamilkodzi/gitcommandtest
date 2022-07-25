@@ -15,10 +15,10 @@ const exec = util.promisify(require('node:child_process').exec);
 async function lsExample() {
     try {
         const statusA = await exec('git fetch');
-        const rawForm = await exec("git diff --stat --raw origin/main")
-        const procelain = await exec("git status --porcelain")
+        // const rawForm = await exec("git diff --stat --raw origin/main")
+        const procelain = await exec("git status")
 
-        console.log("porcelain :",procelain)
+        console.log(procelain)
         // console.log("DIF START: ",rawForm)
         // console.log("DIF ENDS: ")
     } catch (error) {
