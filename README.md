@@ -1,3 +1,8 @@
+Info: Function for git status
+
+
+
+
 Remote downloading GIT info
 Time for testS
 Remember to set up : 
