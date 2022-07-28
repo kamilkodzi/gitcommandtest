@@ -12,7 +12,7 @@ async function lsExample() {
     if (line.includes("modified")) return  {...result,changesDetails:{...result.changesDetails,files:[...result.changesDetails.files, line]}}
     return {...result};
   },{remoteDetails:null,changesDetails:{
-    message:"",
+    message:null,
     files:[]
   }});
 
