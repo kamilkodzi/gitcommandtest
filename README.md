@@ -1,4 +1,4 @@
-Info: Function for git status
+Info: Function for git status - test
 
 
 
