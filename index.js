@@ -3,7 +3,6 @@ const exec = util.promisify(require("node:child_process").exec);
 
 async function lsExample() {
   const { stdout, stderr } = await exec("git status");
-  const porcelain=await exec("git status -porcelain");
   const splitedString = stdout.split("\n");
 
   const reducedArray = splitedString.reduce((result, line,index) => {
